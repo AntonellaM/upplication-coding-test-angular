@@ -27,10 +27,6 @@ export class PointsCardService {
     pointCardDetail2.points = 100;
     pointCard.pointsCard.push(pointCardDetail2);
 
-
     return of(pointCard);
   }
-
-
-
 }
