@@ -1,0 +1,26 @@
+<div>
+  <!-- back icon -->
+  <a href="">back</a>
+  <!-- title-->
+  <h1>Panel de puntos</h1>
+  <!-- config icon -->
+  <a href="">config</a>
+</div>
+
+<p>Dispones de {{pointCard.points}} puntos</p>
+
+<!-- slider here -->
+<div *ngFor='let pointCardDetail of pointCard.pointsCard'>
+  <p>{{pointCardDetail.name}}</p>
+  <img src="{{pointCardDetail.image}}"/>
+  <!-- progress bar... -->
+  <p>{{pointCardDetail.points}}</p>
+</div>
+
+<!-- buttons -->
+<a href="#">Canjear puntos</a>
+<a href="#">Asignar puntos</a>
+<a href="#">VER TÉRMINOS</a>
+
+<!-- dont delete it -->
+<router-outlet></router-outlet>
