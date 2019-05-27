@@ -1,26 +1,56 @@
-<div>
-  <!-- back icon -->
-  <a href="">back</a>
-  <!-- title-->
-  <h1>Panel de puntos</h1>
-  <!-- config icon -->
-  <a href="">config</a>
-</div>
+<header>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__list--item">
+        <a href=""><i class="fas fa-chevron-left"></i></a>
+      </li>
+      <li class="navigation__list--item">
+        <p>Panel de puntos</p>
+      </li>
+      <li class="navigation__list--item">
+        <a href=""><i class="fas fa-cog"></i></a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-<p>Dispones de {{pointCard.points}} puntos</p>
+<main>
+  <section class="exchange-section">
+    <h1 class="exchange-section__title">Dispones de
+      <span class="exchange-section__title--points">{{pointCard.points}}</span>
+      puntos
+    </h1>
+    <carousel [showIndicators]="false">
+      <slide *ngFor='let pointCardDetail of pointCard.pointsCard'>
+        <div class="carousel__card-wrapper">
+          <div class=" carousel__card">
+            <p class="carousel__card--title">{{pointCardDetail.name}}</p>
+            <div class="carousel__image-container">
+              <img class="carousel__image" src="{{pointCardDetail.image}}" />
+            </div>
+            <p>{{pointCardDetail.points}} puntos</p>
+            <div class="carousel__progress">
+              <progressbar type="info" [value]="pointCardDetail.points"></progressbar>
+            </div>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+    <div class="button--disabled">
+      <a href="#">
+        Canjear puntos
+      </a>
+    </div>
+    <div class="button">
+      <a href="#">
+        Asignar puntos
+      </a>
+    </div>
+  </section>
+</main>
 
-<!-- slider here -->
-<div *ngFor='let pointCardDetail of pointCard.pointsCard'>
-  <p>{{pointCardDetail.name}}</p>
-  <img src="{{pointCardDetail.image}}"/>
-  <!-- progress bar... -->
-  <p>{{pointCardDetail.points}}</p>
-</div>
+<footer class="footer">
+  <a href="#">VER TÉRMINOS</a>
+</footer>
 
-<!-- buttons -->
-<a href="#">Canjear puntos</a>
-<a href="#">Asignar puntos</a>
-<a href="#">VER TÉRMINOS</a>
-
-<!-- dont delete it -->
 <router-outlet></router-outlet>
