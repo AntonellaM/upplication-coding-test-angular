@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ProgressbarModule, ProgressbarComponent } from 'ngx-bootstrap/progressbar';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule, 
+    ProgressbarModule.forRoot()
   ],
-  providers: [],
+  providers: [ProgressbarComponent],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
