@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend-angular-css",
+            "outputPath": "dist/upplication-coding-test-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -46,6 +46,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "https://antonellam.github.io/https://github.com/AntonellaM/upplication-coding-test-angular/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
