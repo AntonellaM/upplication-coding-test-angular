@@ -1,0 +1,146 @@
+.navigation {
+  height: 50px;
+  background-color: #DBF2FF;
+
+  a {
+    text-decoration: none;
+    color: #3E4756;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #3E4756;
+  }
+
+  &__list {
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    &--item {
+      font-size: 24px;
+    }
+
+  }
+}
+
+.exchange-section {
+  height: calc(100vh - 100px);
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    color: lightgrey;
+
+    &--points {
+      font-size: 22px;
+      color: #DBF2FF;
+    }
+  }
+}
+
+.button {
+  height: 50px;
+  width: 180px;
+  max-width: 200px;
+  margin: 5px 2em;
+  padding: 0 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #DBF2FF;
+  border-radius: 5px;
+  font-weight: 400;
+  text-transform: capitalize;
+
+  a {
+    text-decoration: none;
+    color: #404756;
+  }
+
+  &--disabled {
+    @extend .button;
+    background-color: lightgrey;
+  }
+}
+
+
+.carousel {
+  &__card-wrapper {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    height: 250px;
+    width: 180px;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &--title {
+      margin: 0;
+      padding-top: 1em;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+
+  &__image-container {
+    margin: 10px 0;
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+  }
+}
+
+.footer {
+  a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #DBF2FF;
+    height: 50px;
+  }
+}
+
+.carousel-control {
+  background-color: lightgrey;
+}
+
+.carousel__progress {
+  width: 150px;
+  margin: 0 auto;
+}
