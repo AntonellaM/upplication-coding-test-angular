@@ -28,7 +28,7 @@ The application layout for this coding test has been conceived for the usage of 
 
 ### Run the project
 
-In order to previsualize the project, you can just check the following link: (LINK)
+In order to previsualize the project, you can just check the following link: (https://antonellam.github.io/upplication-coding-test-angular/)
 
 For further information about coding style and practises, you should:
 
